@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja CRUD - Zgłoszenia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Aplikacja do zarządzania serwisem komputerowym</h1>
+
+    <div class="table-container">
+        <button id="dodajZgloszenieBtn">Dodaj zgłoszenie</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Pracownik</th>
+                    <th>Status</th>
+                    <th>Szczegóły</th>
+                    <th>Akcja</th>
+                </tr>
+            </thead>
+            <tbody id="zgloszeniaTableBody">
+                <!-- Wiersze zgłoszeń będą dodawane dynamicznie przez JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup Dodaj/Edytuj Zgłoszenie -->
+    <div id="zgloszeniePopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Dodaj/Edytuj Zgłoszenie</h2>
+            <form id="zgloszenieForm">
+                <div class="form-group">
+                    <label for="pracownik">Pracownik:</label>
+                    <select id="pracownik" required>
+                        <option value="">-- Wybierz pracownika --</option>
+                        <option value="Jan Kowalski">Jan Kowalski</option>
+                        <option value="Krzysztof Brzęczyszcykiewicz">Krzysztof Brzęczyszcykiewicz</option>
+                        <option value="Pan Paweł">Pan Paweł</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="">-- Wybierz status --</option>
+                        <option value="Przyjęto do realizacji">Przyjęto do realizacji</option>
+                        <option value="W trakcie realizacji">W trakcie realizacji</option>
+                        <option value="Gotowe do odbioru">Gotowe do odbioru</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="klientImie">Imię klienta:</label>
+                    <input type="text" id="klientImie" placeholder="Wprowadź imię" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="klientNazwisko">Nazwisko klienta:</label>
+                    <input type="text" id="klientNazwisko" placeholder="Wprowadź nazwisko" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="klientTel">Numer telefonu klienta:</label>
+                    <input type="tel" id="klientTel" placeholder="Wprowadź numer telefonu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="klientEmail">Adres email klienta:</label>
+                    <input type="email" id="klientEmail" placeholder="Wprowadź adres email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="opis">Opis:</label>
+                    <textarea id="opis" placeholder="Wprowadź opis" rows="4" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="zapiszZgloszenie">Zapisz</button>
+                    <button type="button" id="anulujZgloszenie" class="close-btn">Anuluj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Szczegóły Zgłoszenia -->
+    <div id="szczegolyPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Szczegóły Zgłoszenia</h2>
+            <div id="szczegolyZgloszenia">
+                <!-- Szczegóły będą generowane dynamicznie -->
+            </div>
+            <button class="close-btn">Zamknij</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

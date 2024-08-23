@@ -1,0 +1,275 @@
+/* Ogólne ustawienia */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Tabela */
+.table-container {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center; /* Wyśrodkowanie tekstu w tabeli */
+}
+
+th {
+    background-color: #3f51b5;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Stylizacja przycisku szczegółów */
+.szczegolyBtn {
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.szczegolyBtn:hover {
+    background-color: #00796b;
+}
+
+/* Stylizacja przycisków akcji */
+.actions {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #45a049;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #e53935;
+}
+
+
+#dodajZgloszenieBtn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dodajZgloszenieBtn:hover {
+    background-color: #303f9f;
+}
+
+/* Stylizacja tła popupu */
+.popup-overlay {
+    display: none; /* Początkowo ukryty */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste czarne tło */
+    z-index: 1000;
+}
+
+/* Stylizacja kontenera popupu */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Formularz */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Możliwość zmiany wysokości */
+}
+
+.form-actions {
+    text-align: right;
+}
+
+.form-actions button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button#zapiszZgloszenie {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-actions button#zapiszZgloszenie:hover {
+    background-color: #45a049;
+}
+
+.form-actions button#anulujZgloszenie {
+    background-color: #f44336;
+    color: white;
+}
+
+.form-actions button#anulujZgloszenie:hover {
+    background-color: #e53935;
+}
+
+/* Przyciski w popupach */
+.popup-content .close-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content .close-btn:hover {
+    background-color: #e53935;
+}
+
+
+
+
+/* -================= style do status.html       ===================== */
+
+
+
+
+.status-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.status-container h2 {
+    margin-bottom: 20px;
+}
+
+.status-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.status-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.status-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.status-container button:hover {
+    background-color: #45a049;
+}
+
+#statusResult {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

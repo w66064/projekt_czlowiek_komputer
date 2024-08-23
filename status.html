@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawdź status zgłoszenia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="status-container">
+        <h2>Sprawdź status zgłoszenia</h2>
+        <form id="statusForm">
+            <label for="statusId">Numer zgłoszenia:</label>
+            <input type="text" id="statusId" placeholder="Wprowadź numer zgłoszenia">
+
+            <label for="statusTel">Numer telefonu:</label>
+            <input type="text" id="statusTel" placeholder="Wprowadź numer telefonu">
+
+            <button type="submit">Sprawdź</button>
+        </form>
+
+        <div id="statusResult"></div>
+    </div>
+
+    <script src="status.js"></script>
+</body>
+</html>
